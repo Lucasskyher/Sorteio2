@@ -1,0 +1,42 @@
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: "Jaro";
+    background-color: black;
+    align-content: center;
+    transition: all 0.4 ease;
+    margin-top: 200px;
+
+}
+
+
+.sorteio{
+    border: 2px solid green;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 500px;
+    height: 500px;
+    background-color: white;
+    border-radius: 10px;
+    text-align: center;
+}
+
+
+button{
+    background-color: rgb(71, 173, 180);
+    color: white;
+    border-radius: 5px;
+}
+
+
+figure > img{
+    width: 80%;
+    text-align: center;
+}
+
+
+
