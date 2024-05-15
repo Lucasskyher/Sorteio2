@@ -1,38 +1,48 @@
 const btn = document.querySelector('button');
 const p = document.querySelector('p');
+const figure = document.querySelector('figure > img');
+let operacao = 0;
 
+const gerarCorAleatoria = () => {
+    const rgb = {
+        r: Math.trunc(Math.random() * 256),
+        g: Math.trunc(Math.random() * 256),
+        b: Math.trunc(Math.random() * 256)
+    }
+    return rgb;
+}
 
 const gerarJogo = () =>{
-    const operacao = Math.floor(Math.random() * 6);
-    let numero;
 
+    let numero_antigo;
+    do{
+        numero_antigo = operacao;
+        operacao = Math.floor(Math.random() * 9);
+        console.log(operacao);
+    }while(numero_antigo === operacao);
 
     switch (operacao){
         case 0:
-            numero = 0;
-            break;
+            return operacao;
         case 1:
-            numero = 1;
-            break;
+            return operacao;
         case 2:
-            numero = 2;
-            break;
+            return operacao;
         case 3:
-            numero = 3;
-            break;
+            return operacao;
         case 4:
-            numero = 4;
-            break;
+            return operacao;
         case 5:
-            numero = 4;
-            break;
+            return operacao;
+        case 6:
+            return operacao;
+        case 7:
+            return operacao;
+        case 8:
+            return operacao;
     }
 
-
-    return numero;
-   
 };
-
 
 btn.addEventListener('click', () => {
 
@@ -40,38 +50,67 @@ btn.addEventListener('click', () => {
 
     console.log('clicado!');
     console.log(novoJogo);
+    const novaCor = gerarCorAleatoria();
 
     if (novoJogo === 0){
         console.log('passou 0');
+        p.style.color = 'black';
         p.innerText = 'Rocket League';
+        figure.style.border = `2px solid rgb(${novaCor.r},${novaCor.g},${novaCor.b})`;
     }
     else if(novoJogo === 1){
         console.log('passou 1');
+        p.style.color = 'black';
         p.innerText = 'PUBG';
+        figure.style.border = `2px solid rgb(${novaCor.r},${novaCor.g},${novaCor.b})`;
 
     }
     else if(novoJogo === 2){
         console.log('passou 2');
+        p.style.color = 'black';
         p.innerText = 'Ready or Not';
+        figure.style.border = `2px solid rgb(${novaCor.r},${novaCor.g},${novaCor.b})`;
         
     }
     else if(novoJogo === 3){
         console.log('passou 3');
+        p.style.color = 'black';
         p.innerText = 'Counter-Strike 2';
+        figure.style.border = `2px solid rgb(${novaCor.r},${novaCor.g},${novaCor.b})`;
         
     }
     else if(novoJogo === 4){
         console.log('passou 4');
+        p.style.color = 'black';
         p.innerText = 'Battlefield 1';
+        figure.style.border = `2px solid rgb(${novaCor.r},${novaCor.g},${novaCor.b})`;
         
     }
     else if(novoJogo === 5){
-        console.log('passou 4');
-        p.innerText = 'Battlefield 4';
+        console.log('passou 5');
+        p.style.color = 'black';
+        p.innerText = 'The Division 2';
+        figure.style.border = `2x solid rgb(${novaCor.r},${novaCor.g},${novaCor.b})`;
         
     }
-
-
-
-
+    else if(novoJogo === 6){
+        console.log('passou 6');
+        p.style.color = 'black';
+        p.innerText = 'West Hunt';
+        figure.style.border = `2px solid rgb(${novaCor.r},${novaCor.g},${novaCor.b})`;
+        
+    }
+    else if(novoJogo === 7){
+        console.log('passou 7');
+        p.style.color = 'black';
+        p.innerText = 'Smite';
+        figure.style.border = `2px solid rgb(${novaCor.r},${novaCor.g},${novaCor.b})`;
+        
+    }
+    else if(novoJogo === 8){
+        console.log('passou 8');
+        p.style.color = 'black';
+        p.innerText = 'Alien Swarm';
+        figure.style.border = `2px solid rgb(${novaCor.r},${novaCor.g},${novaCor.b})`;
+    }
 });
