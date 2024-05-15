@@ -1,7 +1,7 @@
 const btn = document.querySelector('button');
 const p = document.querySelector('p');
 const figure = document.querySelector('figure > img');
-let operacao = 0;
+let operacao = null;
 
 const gerarCorAleatoria = () => {
     const rgb = {
@@ -14,10 +14,9 @@ const gerarCorAleatoria = () => {
 
 const gerarJogo = () =>{
 
-    let numero_antigo;
+    let numero_antigo = operacao; 
     do{
-        numero_antigo = operacao;
-        operacao = Math.floor(Math.random() * 9);
+        operacao = Math.floor(Math.random() * 10);
         console.log(operacao);
     }while(numero_antigo === operacao);
 
@@ -39,6 +38,8 @@ const gerarJogo = () =>{
         case 7:
             return operacao;
         case 8:
+            return operacao;
+        case 9:
             return operacao;
     }
 
@@ -111,6 +112,12 @@ btn.addEventListener('click', () => {
         console.log('passou 8');
         p.style.color = 'black';
         p.innerText = 'Alien Swarm';
+        figure.style.border = `2px solid rgb(${novaCor.r},${novaCor.g},${novaCor.b})`;
+    }
+    else if(novoJogo === 9){
+        console.log('passou 9');
+        p.style.color = 'black';
+        p.innerText = 'Battlefield 4';
         figure.style.border = `2px solid rgb(${novaCor.r},${novaCor.g},${novaCor.b})`;
     }
 });
