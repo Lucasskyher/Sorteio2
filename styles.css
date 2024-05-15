@@ -23,6 +23,11 @@ body{
     background-color: white;
     border-radius: 10px;
     text-align: center;
+    font-size: 30px;
+}
+
+.sorteio p{
+    font-size: 25px;
 }
 
 
@@ -30,7 +35,8 @@ button{
     background-color: rgb(71, 173, 180);
     color: white;
     border-radius: 5px;
-    border: 1px solid black;
+    border: 1px black solid;
+    cursor: pointer;
 }
 
 
@@ -40,10 +46,10 @@ figure > img{
     border: 1px solid green;
 }
 
+
 button:hover{
     background-color: rgb(96, 74, 216);
-    box-shadow: 3px 3px 3px 2px rgb(188, 111, 211);
-}
+    box-s
 
 
 
