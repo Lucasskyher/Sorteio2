@@ -30,13 +30,21 @@ button{
     background-color: rgb(71, 173, 180);
     color: white;
     border-radius: 5px;
+    border: 1px solid black;
 }
 
 
 figure > img{
     width: 80%;
     text-align: center;
+    border: 1px solid green;
 }
+
+button:hover{
+    background-color: rgb(96, 74, 216);
+    box-shadow: 3px 3px 3px 2px rgb(188, 111, 211);
+}
+
 
 
 
